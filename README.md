@@ -4,7 +4,7 @@
 
 相信看过《深入理解Java虚拟机》的小伙伴都尝试过自己动手编译OpenJDK，有没有成功呢？评论告诉我。纵观网上那么多教程，不客气的说，要么讲的太简单要么不能用，今天，在踩了无数坑之后成功编译完成的我，为了不让后来者继续踩坑，所以决定写这篇博文。废话不多说，亮图：
 
-![成果图](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/成果图.png)
+![成果图](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/成果图.png)
 
 ## 想想自己到底在哪个坑🙈
 
@@ -60,9 +60,9 @@
 	-  yum makecache 
 - 安装解压工具
 
-![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压.png)
+![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压.png)
 
-![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压2.png)
+![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压2.png)
 
 当然也可以直接执行 yum install zip unzip
 
@@ -72,7 +72,7 @@
 - 上传JDK7到java文件夹下
 - 解压：tar zxvf jdk-7u80-linux-x64.tar.gz
 
-![解压jdk7](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压jdk7.png)
+![解压jdk7](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压jdk7.png)
 
 - 注意，不需要更改环境变量，只需要记住这个地址就行了：/java/jdk1.7.0_80/
 
@@ -83,11 +83,11 @@
 - 上传源码包到javaTest文件夹下
 - 解压：unzip YourOpenJDK.zip -d /javaTest/
 
-![解压OpenJDK](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压OpenJDK.png)
+![解压OpenJDK](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压OpenJDK.png)
 
 - 进入解压后的文件夹中： cd YourOpenJDK
 
-![1599576226566](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/javaTest.png)
+![1599576226566](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/javaTest.png)
 
 
 
