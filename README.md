@@ -4,7 +4,7 @@
 
 相信看过《深入理解Java虚拟机》的小伙伴都尝试过自己动手编译OpenJDK，有没有成功呢？评论告诉我。纵观网上那么多教程，不客气的说，要么讲的太简单要么不能用，今天，在踩了无数坑之后成功编译完成的我，为了不让后来者继续踩坑，所以决定写这篇博文。废话不多说，亮图：
 
-![成果图](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/成果图.png)
+![成果图](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/成果图.png)
 
 ## 想想自己到底在哪个坑🙈
 
@@ -60,9 +60,9 @@
 	-  yum makecache 
 - 安装解压工具
 
-![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压.png)
+![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压.png)
 
-![image-20200909094625137](\img\解压2.png)
+![image-20200909094625137](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压2.png)
 
 当然也可以直接执行 yum install zip unzip
 
@@ -72,7 +72,7 @@
 - 上传JDK7到java文件夹下
 - 解压：tar zxvf jdk-7u80-linux-x64.tar.gz
 
-![解压jdk7](\img\解压jdk7.png)
+![解压jdk7](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压jdk7.png)
 
 - 注意，不需要更改环境变量，只需要记住这个地址就行了：/java/jdk1.7.0_80/
 
@@ -83,11 +83,11 @@
 - 上传源码包到javaTest文件夹下
 - 解压：unzip YourOpenJDK.zip -d /javaTest/
 
-![解压OpenJDK](\img\解压OpenJDK.png)
+![解压OpenJDK](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/解压OpenJDK.png)
 
 - 进入解压后的文件夹中： cd YourOpenJDK
 
-![1599576226566](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/javaTest.png)
+![1599576226566](https://github.com/ChengYongchao/OpenJdk8/blob/master/https://github.com/ChengYongchao/OpenJdk8/blob/master/img/javaTest.png)
 
 
 
@@ -105,11 +105,11 @@ bash ./configure --with-target-bits=64 --with-boot-jdk=/java/jdk1.7.0_80/ --with
 
 到这里，只需要切换到YourOpenJDK这个目录下，不断执行bash ./configure --with-target-bits=64 --with-boot-jdk=/java/jdk1.7.0_80/ --with-debug-level=slowdebug就行了
 
-![](img/configure1.png)
+![](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/configure1.png)
 
 执行一次后看下报错提示，根据提示试用yum安装对应工具直到所有报错解决。举例：
 
-![cc](img/cc.png)
+![cc](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc.png)
 
 
 
@@ -119,21 +119,21 @@ bash ./configure --with-target-bits=64 --with-boot-jdk=/java/jdk1.7.0_80/ --with
 sudo yum groupinstall "Development Tools"
 ```
 
-![cc2](img/cc2.png)
+![cc2](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc2.png)
 
 安装完毕后再次执行bash ./configure --with-target-bits=64 --with-boot-jdk=/java/jdk1.7.0_80/ --with-debug-level=slowdebug 下文同理，这里把遇到的一一列举：
 
-![cc3](img/cc3.png)
+![cc3](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc3.png)
 
-![cc4](img/cc4.png)
+![cc4](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc4.png)
 
-![cc5](img/cc5.png)
+![cc5](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc5.png)
 
-![cc6](img/cc6.png)
+![cc6](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc6.png)
 
 上述一共需要安装六个工具，一直到遇到下图，证明所有工具都准备完成：
 
-![cc7](img/cc7.png)
+![cc7](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/cc7.png)
 
 ### 5.执行make all
 
@@ -143,17 +143,17 @@ sudo yum groupinstall "Development Tools"
 make all
 ```
 
-![m1](img/m1.png)
+![m1](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/m1.png)
 
-![m2](img/m2.png)
+![m2](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/m2.png)
 
 下面就是静静的等待，不会再遇到什么问题（按照上文做，没有的话不保证），根据机器的配置耗时从5min到30min不等，中间会有一些 WARNING警告 和下图的ERROR，都不用管.
 
-![m3](img/m3.png)
+![m3](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/m3.png)
 
 一直到结束，显示如下图：
 
-![r1](img/r1.png)
+![r1](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/r1.png)
 
 Congratulations~,踏过所有的坑，终于编译成功了。下面可以执行命令查看javaversion：
 
@@ -163,7 +163,7 @@ cd build/linux-x86_64-normal-server-slowdebug/images/j2sdk-image/bin/
 ./java -version
 ```
 
-![r2](img/r2.png)
+![r2](https://github.com/ChengYongchao/OpenJdk8/blob/master/img/r2.png)
 
 # 结尾
 
